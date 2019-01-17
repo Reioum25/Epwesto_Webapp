@@ -1,0 +1,34 @@
+How to Run:
+
+1. Download the project.
+2. Move the file to the htdocs folder. Make sure xampp is installed and run it.
+3. Go to 
+This PC > Local Disk(C) > xampp > apache > conf > extra > open httpd-vhosts.conf file
+3. Edit the part with <VirtualHost *:80- 
+copy and make a new line for the DocumentRoot and Server Name to run the system via virtual host or using your browser offflien
+Ex. 
+<VirtualHost *80>
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+ </>VirtualHost>
+ 
+ <VirtualHost *80>
+    DocumentRoot "C:/xampp/htdocs/epwesto/public"
+    ServerName epwsto.test
+ </>VirtualHost>
+ 
+ 4. Next go to 
+ This PC > Local Disk (C) > Windows > System32 > drivers > etc > hosts
+ Make sure its open or run in an editor as administrator to save and edit it
+ 
+ at the bottom of the file 
+place the local host address to run it in your local machine
+type this:
+127.0.0.1 localhost
+127.0.0.1 epwesto.test
+then click save
+
+5. restart your xampp start both the apache and and MySQL to include and read the changes made
+6. Import the SQL file database to phpMyAdmin
+7. Go to your favorite browser and type in the url: epwesto.test
+and there you go, you successfully run the system and land in the home page.
